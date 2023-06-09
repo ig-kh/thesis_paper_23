@@ -1,0 +1,54 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{fontspec}
+\usepackage{graphicx}
+% настраиваем поля
+\usepackage[left=30mm, right=10mm, top=20mm, bottom=20mm]{geometry}
+
+% математический пакет
+\usepackage{amsmath}
+\usepackage{ dsfont }
+
+% для того чтобы в adobe acrobat файл открывался в масштабе 100 процентов
+\usepackage{hyperref}
+\hypersetup{pdfstartview={XYZ null null 1.00}}
+
+% устанавливаем Times New Roman и математический шрифт сочетающийся с ним
+\setmainfont{Times New Roman}
+\usepackage{newtxmath}
+
+% локализация некоторых названий
+\renewcommand\contentsname{Содержание}
+\renewcommand\refname{Список используемой литературы}
+
+% избавляемся от переполнение
+\sloppy
+
+%\полуторный интервал
+\linespread{1.3} 
+
+\begin{document}
+
+% титульник
+\input{title}
+\newpage
+
+% содержание
+\tableofcontents
+\newpage
+
+% введение
+\include{introduction}
+
+% добавляем главы
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+
+% библиография
+\newpage
+\include{bibliography}
+%приложения
+\newpage
+\include{addition}
+\end{document}
